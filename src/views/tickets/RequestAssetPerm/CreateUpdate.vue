@@ -41,7 +41,7 @@ export default {
       fields: [
         [this.$t('common.Basic'), ['title', 'org_id']],
         [this.$t('tickets.RequestPerm'), [
-          'apply_nodes', 'apply_assets', 'apply_accounts',
+          'apply_assets', 'apply_accounts',
           'apply_actions', 'apply_date_start', 'apply_date_expired'
         ]],
         [this.$t('common.Other'), ['comment']]
