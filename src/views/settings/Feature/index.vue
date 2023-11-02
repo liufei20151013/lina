@@ -12,10 +12,11 @@ import Announcement from './Announcement.vue'
 import Vault from './Vault.vue'
 import Ticket from './Ticket.vue'
 import Ops from './Ops.vue'
+import Ris from './Ris.vue'
 
 export default {
   name: 'Feature',
-  components: { TabPage, Announcement, Vault, Ticket, Ops },
+  components: { TabPage, Announcement, Vault, Ticket, Ops, Ris },
   data() {
     return {
       activeMenu: 'Basic',
@@ -37,6 +38,11 @@ export default {
           title: this.$t('setting.AccountStorage'),
           name: 'Vault',
           hidden: !this.$hasPerm('settings.change_vault') || !this.$store.getters.hasValidLicense
+        },
+        {
+          title: this.$t('setting.RisPAM'),
+          name: 'Ris',
+          hidden: !this.$hasPerm('settings.change_ris') || !this.$store.getters.hasValidLicense
         }
       ]
     }
