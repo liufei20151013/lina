@@ -1779,6 +1779,10 @@
     "LDAPServerInfo": "LDAP Server",
     "LDAPUser": "LDAP User",
     "ChatAI": "Chat ai",
+    "EnableITSM": "Opening ITSM",
+    "ITSMHelpText": "Due to security reasons, ITSM needs to be enabled in the configuration file< 2. After activation, fill in other configurations for testing< 3. Perform data synchronization, which is one-way and only synchronizes data from CMDB to JumpServer< After modifying the ITSM configuration again, the service needs to be restarted.",
+    "ITSM": "ITSM",
+    "Account": "Account",
     "Example": "Example: {example}",
     "InsecureCommandAlert": "Insecure command alert",
     "helpText": {
