@@ -1765,6 +1765,10 @@
     "LDAPServerInfo": "LDAPサーバー",
     "LDAPUser": "LDAPユーザー",
     "ChatAI": "チャットAI",
+    "EnableITSM": "ITSMオープン",
+    "ITSMHelpText": "1.セキュリティ上の理由により、プロファイルでITSMを開く必要があります。<br>2.オープン後、他の構成を記入し、テストを行います。<br>3.データの同期を行い、同期は一方向で、CMDBからJumpServerにデータを同期するだけです。<br>4.ITSM構成を2回変更した後、サービスを再起動する必要があります。",
+    "ITSM": "ITSM",
+    "Account": "アカウント",
     "Example": "例: {example}",
     "helpText": {
       "TempPassword": "一時パスワードの有効期間は300秒で、使用後すぐに失効します",
