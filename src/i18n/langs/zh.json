@@ -1771,6 +1771,10 @@
     "LDAPServerInfo": "LDAP 服务器",
     "LDAPUser": "LDAP 用户",
     "ChatAI": "智能问答",
+    "EnableITSM": "开启 ITSM",
+    "ITSMHelpText": "1. 由于安全原因，需要配置文件中开启 ITSM。<br>2. 开启后，填写其他配置，进行测试。<br>3. 进行数据同步，同步是单向的，只会从 CMDB 同步数据到 JumpServer。<br>4. 二次修改 ITSM 配置后需重启服务。",
+    "ITSM": "ITSM",
+    "account": "账号信息",
     "Example": "例: {example}",
     "helpText": {
       "TempPassword": "临时密码有效期为 300 秒，使用后立刻失效",
