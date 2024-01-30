@@ -1887,7 +1887,11 @@
     "AccountStorage": "Account Storage",
     "Passkey": "Passkey",
     "ReplayStorageCreateUpdateHelpMessage": "Note: Currently, SFTP storage only supports account backup and does not support video storage.",
-    "VirtualApp": "Virtual App"
+    "VirtualApp": "Virtual App",
+    "account": "Account",
+    "Pilla": "Pilla",
+    "EnablePilla": "Opening Pilla",
+    "PillaHelpText": "1. Due to security reasons, it is necessary to enable Para in the configuration file.<br>2. After opening, fill in other configurations for testing.<br>3. After the second modification of the Para configuration, the service needs to be restarted."
   },
   "tickets": {
     "BatchApproval": "Batch approval",

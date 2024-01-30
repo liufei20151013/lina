@@ -1864,7 +1864,11 @@
     "testHelpText": "请输入目的地址进行测试",
     "Storage": "存储设置",
     "ReplayStorageCreateUpdateHelpMessage": "注意：目前 SFTP 存储仅支持账号备份，暂不支持录像存储。",
-    "VirtualApp": "虚拟应用"
+    "VirtualApp": "虚拟应用",
+    "account": "账号信息",
+    "Pilla": "派拉",
+    "EnablePilla": "开启派拉",
+    "PillaHelpText": "1. 由于安全原因，需要配置文件中开启派拉。<br>2. 开启后，填写其他配置，进行测试。<br>3. 二次修改派拉配置后需重启服务。"
   },
   "tickets": {
     "BatchApproval": "批量审批",

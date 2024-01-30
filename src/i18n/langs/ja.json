@@ -1879,7 +1879,11 @@
     "AccountStorage": "アカウントストレージ",
     "Passkey": "パスキー",
     "ReplayStorageCreateUpdateHelpMessage": "注: 現在、SFTP ストレージはアカウントのバックアップのみをサポートしており、ビデオ ストレージはサポートしていません。",
-    "VirtualApp": "仮想アプリケーション"
+    "VirtualApp": "仮想アプリケーション",
+    "Account": "アカウント",
+    "Pilla": "ピラ",
+    "EnablePilla": "パイラを開く。",
+    "PillaHelpText": "1. セキュリティ上の理由により、プロファイルでパラメータを開く必要があります。<br>2. オンになったら、他の構成を記入して、テストを行います。<br>3. ディスパッチ構成を2回変更すると、サービスを再起動する必要があります。"
   },
   "tickets": {
     "BatchApproval": "大量承認です",
