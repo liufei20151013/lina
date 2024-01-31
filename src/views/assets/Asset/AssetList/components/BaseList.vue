@@ -126,7 +126,7 @@ export default {
           min: ['name', 'address', 'actions'],
           default: [
             'name', 'address', 'platform',
-            'connectivity', 'actions'
+            'connectivity', 'actions', 'date_updated'
           ]
         },
         columnsMeta: {
