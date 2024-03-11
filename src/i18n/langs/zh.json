@@ -478,7 +478,10 @@
     "OracleDBNameHelpText": "提示：填写 Oracle 数据库的SID或服务名称（Service Name）",
     "Remove": "移除",
     "AddGatewayInDomain": "添加网关",
-    "AddAssetInDomain": "添加资产"
+    "AddAssetInDomain": "添加资产",
+    "CollectingAsset": "收藏资产",
+    "FavoriteNode": "收藏夹",
+    "TestFavoriteNodeErrorMsg": "请选择收藏夹"
   },
   "audits": {
     "ChangeField": "变更字段",
@@ -1443,6 +1446,9 @@
     "LoginLog": "登录日志",
     "MyApps": "我的应用",
     "MyAssets": "我的资产",
+    "MyFavoriteNodes": "我的收藏夹",
+    "FavoriteNodeCreate": "创建收藏夹",
+    "FavoriteNodeUpdate": "更新收藏夹",
     "OperateLog": "操作日志",
     "PasswordChangeLog": "改密日志",
     "Perms": "权限管理",
@@ -1616,6 +1622,7 @@
     "riskLevels": {
       "common": "普通"
     },
+    "position": "定位",
     "SessionID": "会话ID",
     "TargetResources": "目标资源",
     "UseProtocol": "使用协议",
