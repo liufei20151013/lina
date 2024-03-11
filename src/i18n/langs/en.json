@@ -476,7 +476,10 @@
     "WebUpdate": "Update asset - Web",
     "DatabaseUpdate": "Update asset - Database",
     "GPTCreate": "Create asset - GPT",
-    "AppletHostDomainHelpText": "These domains are in System Organization"
+    "AppletHostDomainHelpText": "These domains are in System Organization",
+    "CollectingAsset": "Collecting asset",
+    "FavoriteNode": "Favorite node",
+    "TestFavoriteNodeErrorMsg": "Please select favourites"
   },
   "audits": {
     "ChangeField": "Change field",
@@ -1392,6 +1395,9 @@
     "LoginLog": "Login logs",
     "MyApps": "My Apps",
     "MyAssets": "My assets",
+    "MyFavoriteNodes": "My favorite nodes",
+    "FavoriteNodeCreate": "FavoriteNode create",
+    "FavoriteNodeUpdate": "FavoriteNode update",
     "OperateLog": "Operation logs",
     "PasswordChangeLog": "Password change logs",
     "Perms": "Permissions",

@@ -476,7 +476,10 @@
     "WebUpdate": "資産の更新 - Web",
     "DatabaseUpdate": "資産の更新 - データベース",
     "GPTCreate": "資産の作成 - GPT",
-    "AppletHostDomainHelpText": "これらのドメインはシステム組織にあります"
+    "AppletHostDomainHelpText": "これらのドメインはシステム組織にあります",
+    "CollectingAsset": "資産の収集",
+    "FavoriteNode": "お気に入りフォルダ",
+    "TestFavoriteNodeErrorMsg": "お気に入りを選択してください"
   },
   "audits": {
     "ChangeField": "フィールドを変更します",
@@ -1397,6 +1400,9 @@
     "LoginLog": "ログインログ",
     "MyApps": "私の応用",
     "MyAssets": "マイ資産",
+    "MyFavoriteNodes": "のお気に入り",
+    "FavoriteNodeCreate": "お気に入りを作る",
+    "FavoriteNodeUpdate": "お気に入りを更新",
     "OperateLog": "操作ログ",
     "PasswordChangeLog": "パスワード変更ログ",
     "Perms": "権限管理",
