@@ -1,8 +1,6 @@
 {
   "": "",
   "accounts": {
-    "AccountName": "Account name",
-    "AccountBatchUpdate": "Batch update(same type)",
     "SuFrom": "Su from",
     "GenerateSuccessMsg": "Accounts generated successfully",
     "GenerateAccounts": "Regenerate accounts",
@@ -486,7 +484,10 @@
     "OracleDBNameHelpText": "Tips: Enter the Oracle database's SID or Service Name",
     "Remove": "Remove",
     "AddGatewayInDomain": "Add gateway",
-    "AddAssetInDomain": "Add asset"
+    "AddAssetInDomain": "Add asset",
+    "CollectingAsset": "Collecting asset",
+    "FavoriteNode": "Favorite node",
+    "TestFavoriteNodeErrorMsg": "Please select favourites"
   },
   "audits": {
     "ChangeField": "Change field",
@@ -1405,6 +1406,9 @@
     "LoginLog": "Login logs",
     "MyApps": "My Apps",
     "MyAssets": "My assets",
+    "MyFavoriteNodes": "My favorite nodes",
+    "FavoriteNodeCreate": "FavoriteNode create",
+    "FavoriteNodeUpdate": "FavoriteNode update",
     "OperateLog": "Operation logs",
     "PasswordChangeLog": "Password change logs",
     "Perms": "Permissions",
