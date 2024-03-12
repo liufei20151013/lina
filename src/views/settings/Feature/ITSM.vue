@@ -52,7 +52,9 @@ export default {
             'ITSM_SERVER',
             'ITSM_HOST',
             'ITSM_OBJECT_ID',
-            'ITSM_SYNC_CRONTAB'
+            'ITSM_SYNC_CRONTAB',
+            'ITSM_AREA',
+            'ITSM_ENVIRONMENT'
           ]
         ]
       ],
@@ -87,6 +89,16 @@ export default {
           }
         },
         ITSM_SYNC_CRONTAB: {
+          hidden: (formValue) => {
+            return !formValue.ITSM_ENABLED
+          }
+        },
+        ITSM_AREA: {
+          hidden: (formValue) => {
+            return !formValue.ITSM_ENABLED
+          }
+        },
+        ITSM_ENVIRONMENT: {
           hidden: (formValue) => {
             return !formValue.ITSM_ENABLED
           }
