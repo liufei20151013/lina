@@ -1,6 +1,8 @@
 {
   "": "",
   "accounts": {
+    "AccountName": "Account name",
+    "AccountBatchUpdate": "Batch update(same type)",
     "SuFrom": "Su from",
     "GenerateSuccessMsg": "Accounts generated successfully",
     "GenerateAccounts": "Regenerate accounts",
