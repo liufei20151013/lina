@@ -22,7 +22,6 @@ import ECharts from 'vue-echarts'
 import service from '@/utils/request'
 import { message } from '@/utils/message'
 import xss from '@/utils/xss'
-import request from '@/utils/request'
 import ElTableTooltipPatch from '@/utils/elTableTooltipPatch.js'
 
 /**
@@ -78,22 +77,4 @@ new Vue({
   router,
   store,
   render: h => h(App)
-})
-
-;(function() {
-  request({
-    url: '/api/v1/authentication/user-session/',
-    method: 'get'
-  })
-})()
-
-let IdBeforeunload = false
-
-window.addEventListener('beforeunload', (event) => {
-  if (IdBeforeunload) return
-  IdBeforeunload = true
-  request({
-    url: '/api/v1/authentication/user-session/',
-    method: 'delete'
-  })
 })
