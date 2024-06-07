@@ -15,10 +15,11 @@ import Ops from './Ops.vue'
 import Chat from './Chat.vue'
 import VirtualApp from './VirtualApp.vue'
 import ITSM from './ITSM.vue'
+import ITSMSyncJS from './ITSMSyncJS'
 
 export default {
   name: 'Feature',
-  components: { TabPage, Announcement, Vault, Ticket, Ops, Chat, VirtualApp, ITSM },
+  components: { TabPage, Announcement, Vault, Ticket, Ops, Chat, VirtualApp, ITSM, ITSMSyncJS },
   data() {
     return {
       activeMenu: 'Announcement',
@@ -55,6 +56,11 @@ export default {
           title: this.$t('setting.ITSM'),
           name: 'ITSM',
           hidden: !this.$hasPerm('settings.change_itsm') || !this.$store.getters.hasValidLicense
+        },
+        {
+          title: this.$t('setting.ITSMSyncJS'),
+          name: 'ITSMSyncJS',
+          hidden: !this.$hasPerm('settings.change_itsm_sync_js') || !this.$store.getters.hasValidLicense
         }
       ]
     }

@@ -1779,8 +1779,11 @@
     "LDAPUser": "LDAP 用户",
     "ChatAI": "智能问答",
     "EnableITSM": "开启 ITSM",
-    "ITSMHelpText": "1. 由于安全原因，需要配置文件中开启 ITSM。<br>2. 开启后，填写其他配置，进行测试。<br>3. 进行数据同步，同步是单向的，只会从 CMDB 同步数据到 JumpServer。<br>4. 二次修改 ITSM 配置后需重启服务。",
+    "ITSMHelpText": "1. 由于安全原因，需要配置文件中开启 ITSM。<br>2. 开启后，填写其他配置，进行测试。<br>3. 进行数据同步，同步是单向的，只会从 CMDB 同步数据到 JumpServer。<br>4. 关闭服务需要修改 config.txt 配置文件后重启服务。",
     "ITSM": "ITSM",
+    "EnableITSMSyncJS": "开启同步其它 JumpServer 数据",
+    "ITSMSyncJSHelpText": "1. 由于安全原因，需要配置文件中开启同步其它 JumpServer 数据。<br>2. 开启后，填写其他配置，进行测试。<br>3. 进行数据同步，同步是单向的，只会从其它 JumpServer 同步数据到当前环境。<br>4. 关闭服务需要修改 config.txt 配置文件后重启服务。",
+    "ITSMSyncJS": "同步其它 JumpServer 数据",
     "account": "账号信息",
     "Example": "例: {example}",
     "helpText": {
