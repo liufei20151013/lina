@@ -16,10 +16,11 @@ import Chat from './Chat.vue'
 import VirtualApp from './VirtualApp.vue'
 import ITSM from './ITSM.vue'
 import ITSMSyncJS from './ITSMSyncJS'
+import ITSMSyncJSMFA from './ITSMSyncJSMFA'
 
 export default {
   name: 'Feature',
-  components: { TabPage, Announcement, Vault, Ticket, Ops, Chat, VirtualApp, ITSM, ITSMSyncJS },
+  components: { TabPage, Announcement, Vault, Ticket, Ops, Chat, VirtualApp, ITSM, ITSMSyncJS, ITSMSyncJSMFA },
   data() {
     return {
       activeMenu: 'Announcement',
@@ -61,6 +62,11 @@ export default {
           title: this.$t('setting.ITSMSyncJS'),
           name: 'ITSMSyncJS',
           hidden: !this.$hasPerm('settings.change_itsm_sync_js') || !this.$store.getters.hasValidLicense
+        },
+        {
+          title: this.$t('setting.ITSMSyncJSMFA'),
+          name: 'ITSMSyncJSMFA',
+          hidden: !this.$hasPerm('settings.change_itsm_sync_js_mfa') || !this.$store.getters.hasValidLicense
         }
       ]
     }

@@ -1792,6 +1792,9 @@
     "EnableITSMSyncJS": "他の JumpServer データとの同期を可能にします",
     "ITSMSyncJSHelpText": "1. セキュリティ上の理由から、他のJumpServerデータの同期は設定ファイルで有効にする必要があります。<br>2. オープン後、他の構成を記入し、テストを行います。<br>3. データの同期は一方向で、他のJumpServersから現在の環境にのみ同期されます。<br>4. サービスを停止するには、config.txt設定ファイルを修正し、サービスを再起動する必要があります。",
     "ITSMSyncJS": "他のJumpServerデータの同期",
+    "EnableITSMSyncJSMFA": "ローカルユーザーのMFAを他のJumpServersに同期できるようにします。",
+    "ITSMSyncJSMFAHelpText": "1. セキュリティ上の理由から、ローカルユーザーMFAの他のJumpServersへの同期は、設定ファイルで有効にする必要があります。<br>2. オープン後、他の構成を記入し、テストを行います。<br>3. データの同期は一方向で、現在の環境から他のジャンプサーバーにユーザーのMFAデータを同期するだけです。<br>4. サービスを停止するには、config.txt設定ファイルを修正し、サービスを再起動する必要があります。",
+    "ITSMSyncJSMFA": "ローカルユーザーのMFAを他のJumpServersに同期させる",
     "Account": "アカウント",
     "Example": "例: {example}",
     "helpText": {
