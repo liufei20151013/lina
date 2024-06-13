@@ -1786,6 +1786,9 @@
     "EnableITSMSyncJS": "开启同步其它 JumpServer 数据",
     "ITSMSyncJSHelpText": "1. 由于安全原因，需要配置文件中开启同步其它 JumpServer 数据。<br>2. 开启后，填写其他配置，进行测试。<br>3. 进行数据同步，同步是单向的，只会从其它 JumpServer 同步数据到当前环境。<br>4. 关闭服务需要修改 config.txt 配置文件后重启服务。",
     "ITSMSyncJS": "同步其它 JumpServer 数据",
+    "EnableITSMSyncJSMFA": "开启同步本地用户 MFA 到其它 JumpServer",
+    "ITSMSyncJSMFAHelpText": "1. 由于安全原因，需要配置文件中开启同步本地用户 MFA 到其它 JumpServer。<br>2. 开启后，填写其他配置，进行测试。<br>3. 进行数据同步，同步是单向的，只会从当前环境同步用户的 MFA 数据到其它 JumpServer。<br>4. 关闭服务需要修改 config.txt 配置文件后重启服务。",
+    "ITSMSyncJSMFA": "同步本地用户 MFA 到其它 JumpServer",
     "account": "账号信息",
     "Example": "例: {example}",
     "helpText": {
