@@ -61,12 +61,12 @@ export default {
         {
           title: this.$t('setting.ITSMSyncJS'),
           name: 'ITSMSyncJS',
-          hidden: !this.$hasPerm('settings.change_itsm_sync_js') || !this.$store.getters.hasValidLicense
+          hidden: !this.$hasPerm('settings.change_itsmSyncJs') || !this.$store.getters.hasValidLicense
         },
         {
           title: this.$t('setting.ITSMSyncJSMFA'),
           name: 'ITSMSyncJSMFA',
-          hidden: !this.$hasPerm('settings.change_itsm_sync_js_mfa') || !this.$store.getters.hasValidLicense
+          hidden: !this.$hasPerm('settings.change_itsmSyncJsMfa') || !this.$store.getters.hasValidLicense
         }
       ]
     }
