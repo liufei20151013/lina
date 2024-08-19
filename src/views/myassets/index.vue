@@ -6,16 +6,23 @@
       :table-config="tableConfig"
       :tree-setting="treeSetting"
     />
+    <FavoriteAssetDialog
+      :cell="cell"
+      :all-favorites="allFavorites"
+      :visible.sync="visible"
+    />
   </div>
 </template>
 
 <script>
 import GenericTreeListPage from '@/layout/components/GenericTreeListPage'
 import { AccountShowFormatter, DialogDetailFormatter } from '@/components/Table/TableFormatters'
+import FavoriteAssetDialog from './components/FavoriteAssetDialog'
 
 export default {
   components: {
-    GenericTreeListPage
+    GenericTreeListPage,
+    FavoriteAssetDialog
   },
   data() {
     return {
@@ -171,7 +178,9 @@ export default {
         hasImport: false,
         hasLeftActions: false,
         hasSearch: true
-      }
+      },
+      cell: '',
+      visible: false
     }
   },
   mounted() {
@@ -187,16 +196,13 @@ export default {
       })
     },
     favor(assetId) {
-      const data = { asset: assetId }
-      const url = '/api/v1/assets/favorite-assets/'
-      this.$axios.post(url, data).then(() => {
-        this.allFavorites.push({ asset: assetId })
-        this.$message.success(this.$i18n.t('common.CollectionSucceed'))
-      })
+      this.visible = true
+      this.cell = assetId
     },
     disfavor(assetId) {
       const url = `/api/v1/assets/favorite-assets/?asset=${assetId}`
       this.$axios.delete(url).then(() => {
+        this.$refs.GenericTreeListPage.reloadTable()
         this.allFavorites = this.allFavorites.filter(item => item['asset'] !== assetId)
         this.$message.success(this.$i18n.t('common.CancelCollection'))
       })
