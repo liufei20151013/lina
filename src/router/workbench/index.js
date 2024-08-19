@@ -42,7 +42,47 @@ export default {
         permissions: ['perms.view_myassets']
       }
     },
-
+    {
+      path: '/workbench/favorite_nodes',
+      name: 'MyFavoriteNodes',
+      component: empty,
+      redirect: '',
+      meta: {
+        icon: 'assets',
+        title: i18n.t('route.MyFavoriteNodes')
+      },
+      children: [
+        {
+          path: '',
+          name: 'FavoriteNodeList',
+          component: () => import('@/views/myFavoriteNodes/index'),
+          meta: {
+            title: i18n.t('route.MyFavoriteNodes'),
+            permissions: ['assets.view_favoritenode']
+          }
+        },
+        {
+          path: ':id/update',
+          name: 'FavoriteNodeUpdate',
+          component: () => import('@/views/myFavoriteNodes/FavoriteNodeCreateUpdate'),
+          hidden: true,
+          meta: {
+            title: i18n.t('route.FavoriteNodeUpdate'),
+            permissions: ['assets.change_favoritenode']
+          }
+        },
+        {
+          path: 'create',
+          name: 'FavoriteNodeCreate',
+          component: () => import('@/views/myFavoriteNodes/FavoriteNodeCreateUpdate'),
+          hidden: true,
+          meta: {
+            title: i18n.t('route.FavoriteNodeCreate'),
+            permissions: ['assets.add_favoritenode']
+          }
+        }
+      ]
+    },
     {
       path: `external-luna`,
       component: empty,
