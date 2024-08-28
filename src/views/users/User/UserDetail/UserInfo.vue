@@ -176,7 +176,7 @@ export default {
             return <img src={this.object.avatar_url} alt='' height='50'/>
           }
         },
-        'id', 'name', 'username', 'email',
+        'id', 'name', 'username', 'job_num', 'companies', 'email',
         {
           key: this.$t('users.Phone'),
           formatter: () => {
