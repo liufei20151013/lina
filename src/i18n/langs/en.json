@@ -481,6 +481,7 @@
     "CloudUpdate": "Update asset - Cloud",
     "GPTUpdate": "Update asset - GPT",
     "PlatformSimple": "Platform",
+    "Director": "Director",
     "HostUpdate": "Update asset - Host",
     "WebUpdate": "Update asset - Web",
     "DatabaseUpdate": "Update asset - Database",

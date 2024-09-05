@@ -130,7 +130,7 @@ export default {
           min: ['name', 'address', 'actions'],
           default: [
             'name', 'address', 'platform',
-            'connectivity', 'actions'
+            'director', 'connectivity', 'actions'
           ]
         },
         columnsMeta: {
@@ -145,6 +145,10 @@ export default {
           },
           platform: {
             sortable: true
+          },
+          director: {
+            label: this.$t('assets.Director'),
+            name: 'director'
           },
           protocols: {
             showFullContent: true,
