@@ -384,6 +384,7 @@
     "Platform": "系統平台",
     "PlatformSimple": "平台",
     "PlatformDetail": "平台詳情",
+    "Director": "負責人",
     "DefaultDatabase": "默認資料庫",
     "UseSSL": "開啟 SSL",
     "ProtocolsGroup": "協議",

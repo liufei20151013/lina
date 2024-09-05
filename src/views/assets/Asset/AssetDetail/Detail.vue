@@ -213,7 +213,12 @@ export default {
             key: this.$t('assets.Platform'),
             value: this.object.platform.name
           },
-          'is_active', 'date_created', 'created_by', 'comment'
+          'is_active', 'date_created', 'created_by',
+          {
+            key: this.$t('assets.Director'),
+            value: this.object.director.name
+          },
+          'comment'
         ]
       },
       specInfoConfig: {

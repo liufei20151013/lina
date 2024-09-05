@@ -126,6 +126,7 @@ export const assetFieldsMeta = (vm) => {
       label: i18n.t('assets.Accounts'),
       el: {
         platform: {},
+        director: {},
         default: []
       }
     },
@@ -139,6 +140,19 @@ export const assetFieldsMeta = (vm) => {
           }
         },
         clearable: true
+      }
+    },
+    director: {
+      rules: [rules.Required],
+      label: i18n.t('assets.Director'),
+      el: {
+        multiple: false,
+        ajax: {
+          url: `/api/v1/users/users/`,
+          transformOption: (item) => {
+            return { label: item.name, value: item.id }
+          }
+        }
       }
     },
     labels: {
@@ -236,6 +250,14 @@ export const assetJSONSelectMeta = (vm) => {
           type: 'fk',
           el: {
             url: '/api/v1/assets/platforms/'
+          }
+        },
+        {
+          name: 'director',
+          label: vm.$t('assets.Director'),
+          type: 'fk',
+          el: {
+            url: '/api/v1/users/users/'
           }
         },
         {

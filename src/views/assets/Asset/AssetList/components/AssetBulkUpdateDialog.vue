@@ -41,7 +41,7 @@ export default {
       formSetting: {
         url: '/api/v1/assets/assets/',
         hasSaveContinue: false,
-        fields: ['platform', 'nodes', 'domain', 'labels', 'is_active', 'comment'],
+        fields: ['platform', 'director', 'nodes', 'domain', 'labels', 'is_active', 'comment'],
         fieldsMeta: {
           platform: {
             el: {
@@ -58,6 +58,21 @@ export default {
             ],
             label: this.$t('assets.Platform'),
             helpText: this.$t('assets.BulkUpdatePlatformHelpText')
+          },
+          director: {
+            el: {
+              multiple: false,
+              ajax: {
+                url: `/api/v1/users/users/`,
+                transformOption: (item) => {
+                  return { label: item.name, value: item.id }
+                }
+              }
+            },
+            rules: [
+              { required: false }
+            ],
+            label: this.$t('assets.Director')
           },
           nodes: {
             ...meta.nodes,

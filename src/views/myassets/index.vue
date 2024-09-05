@@ -43,11 +43,11 @@ export default {
         hasTree: true,
         columnsExclude: ['spec_info'],
         columnsShow: {
-          default: ['name', 'address', 'platform', 'accounts', 'connectivity', 'is_active', 'actions'],
+          default: ['name', 'address', 'platform', 'director', 'accounts', 'connectivity', 'is_active', 'actions'],
           min: ['name', 'address', 'actions']
         },
         columns: [
-          'name', 'address', 'domain', 'platform', 'connectivity', 'is_active',
+          'name', 'address', 'domain', 'platform', 'director', 'connectivity', 'is_active',
           'nodes', 'org_name', 'created_by', 'labels', 'accounts', 'comment', 'actions'
         ],
         columnsMeta: {
@@ -88,6 +88,10 @@ export default {
                   {
                     key: this.$t('assets.Platform'),
                     value: row.platform?.name || ''
+                  },
+                  {
+                    key: this.$t('assets.Director'),
+                    value: row.director?.name || ''
                   },
                   {
                     key: this.$t('common.Active'),

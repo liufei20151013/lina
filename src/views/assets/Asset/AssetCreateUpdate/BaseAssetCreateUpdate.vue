@@ -47,16 +47,18 @@ export default {
     return {
       loading: true,
       platform: {},
+      director: {},
       defaultConfig: {
         initial: {},
         platform: {},
+        director: {},
         url: '/api/v1/assets/hosts/',
         hasReset: false,
         createSuccessNextRoute: this.createSuccessNextRoute,
         updateSuccessNextRoute: this.updateSuccessNextRoute,
         hasDetailInMsg: false,
         fields: [
-          [this.$t('common.Basic'), ['name', 'address', 'platform', 'nodes']],
+          [this.$t('common.Basic'), ['name', 'address', 'platform', 'nodes', 'director']],
           [this.$t('assets.Protocol'), ['protocols']],
           [this.$t('assets.Account'), ['accounts']],
           [this.$t('common.Other'), ['domain', 'labels', 'is_active', 'comment']]
