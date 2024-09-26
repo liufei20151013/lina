@@ -29,18 +29,6 @@ export default {
       }
     },
     {
-
-      path: '/tickets/assigned-tickets',
-      name: 'AssignedTicketList',
-      component: () => import('@/views/tickets/AssignedTicketList'),
-      meta: {
-        title: i18n.t('route.AssignedTicketList'),
-        icon: 'ticket-approval',
-        showOrganization: false,
-        permissions: []
-      }
-    },
-    {
       path: '/tickets/tickets',
       redirect: '',
       component: empty,

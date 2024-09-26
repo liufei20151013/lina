@@ -34,8 +34,7 @@ export default {
       })
     },
     goToTickets() {
-      // this.$router.push({ name: 'TicketList' })
-      this.$router.push('/tickets/assigned-tickets')
+      this.$router.push('/tickets/my-tickets')
     }
   }
 }
