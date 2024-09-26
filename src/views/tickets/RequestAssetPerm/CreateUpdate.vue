@@ -9,7 +9,7 @@
 
 <script>
 import { GenericCreateUpdatePage } from '@/layout/components'
-import AccountFormatter from '@/views/perms/AssetPermission/components/AccountFormatter'
+import TicketAccountFormatter from '@/views/perms/AssetPermission/components/TicketAccountFormatter'
 import Select2 from '@/components/Form/FormFields/Select2'
 import { getDaysFuture } from '@/utils/common'
 import { mapGetters, mapState } from 'vuex'
@@ -91,7 +91,7 @@ export default {
           }
         },
         apply_accounts: {
-          component: AccountFormatter,
+          component: TicketAccountFormatter,
           el: {
             nodes: [],
             assets: [],
