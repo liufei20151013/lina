@@ -13,9 +13,6 @@
       </div>
       <template>
         <el-form ref="requestForm" :model="requestForm" label-width="140px" label-position="left" class="assets">
-          <el-form-item :label="$tc('assets.Node')">
-            <Select2 v-model="requestForm.nodes" v-bind="nodeSelect2" style="width: 50% !important" />
-          </el-form-item>
           <el-form-item :label="$tc('tickets.Asset')">
             <Select2 v-model="requestForm.assets" v-bind="assetSelect2" style="width: 50% !important" />
           </el-form-item>
@@ -79,25 +76,11 @@ export default {
       treeNodes,
       statusMap: this.object.status.value === 'open' ? STATUS_MAP['pending'] : STATUS_MAP[this.object.state.value],
       requestForm: {
-        nodes: this.object.apply_nodes?.map(i => i.id),
         assets: this.object.apply_assets?.map(i => i.id),
         accounts: this.object.apply_accounts,
         actions: this.object.apply_actions,
         apply_date_expired: this.object.apply_date_expired,
         apply_date_start: this.object.apply_date_start
-      },
-      nodeSelect2: {
-        multiple: true,
-        value: this.object.apply_nodes,
-        ajax: {
-          url: (function(object) {
-            const oid = object.org_id
-            return `/api/v1/assets/nodes/?oid=${oid}&protocol__in=rdp,vnc,ssh,telnet`
-          }(this.object)),
-          transformOption: (item) => {
-            return { label: `${item.full_value}`, value: item.id }
-          }
-        }
       },
       assetSelect2: {
         multiple: true,
@@ -124,10 +107,6 @@ export default {
     specialCardItems() {
       const { object } = this
       return [
-        {
-          key: this.$tc('perms.Node'),
-          value: object.apply_nodes.map(item => item.name).join(', ')
-        },
         {
           key: this.$tc('tickets.Asset'),
           value: object.apply_assets.map(item => item.name).join(', ')
@@ -165,10 +144,6 @@ export default {
               return <span>{value}</span>
             }
           }
-        },
-        {
-          key: this.$tc('perms.Node'),
-          value: object.apply_nodes.map(item => item.name).join(', ')
         },
         {
           key: this.$tc('assets.Asset'),
@@ -211,18 +186,16 @@ export default {
       window.location.reload()
     },
     handleApprove() {
-      const nodes = this.requestForm.nodes
       const assets = this.requestForm.assets
       const accounts = this.requestForm.accounts
       if (this.object.approval_step.value === this.object.process_map.length) {
-        if (assets.length === 0 && nodes.length === 0) {
+        if (assets.length === 0) {
           return this.$message.error(this.$tc('common.SelectAtLeastOneAssetOrNodeErrMsg'))
         } else if (accounts.length === 0) {
           return this.$message.error(this.$tc('common.RequiredSystemUserErrMsg'))
         }
       }
       this.$axios.patch(`/api/v1/tickets/apply-asset-tickets/${this.object.id}/approve/`, {
-        apply_nodes: nodes || [],
         apply_assets: assets || [],
         apply_accounts: accounts || [],
         org_id: this.object.org_id,
