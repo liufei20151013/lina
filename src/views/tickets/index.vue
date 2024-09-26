@@ -1,7 +1,7 @@
 <template>
   <TabPage :active-menu.sync="config.activeMenu" :submenu="config.submenu">
     <el-badge
-      v-if="props.tab === 'AssignedTicketList'"
+      v-if="props.tab === 'MyTicketList'"
       slot="badge"
       v-slot="props"
       :value="getBadgeValue(props)"
@@ -18,14 +18,12 @@
 import { TabPage } from '@/layout/components'
 import { mapGetters } from 'vuex'
 import { getTicketOpenCount } from '@/api/ticket'
-import AssignedTicketList from './AssignedTicketList'
 import MyTicketList from './MyTicketList'
 
 export default {
   name: 'Index',
   components: {
     TabPage,
-    AssignedTicketList,
     MyTicketList
   },
   data() {
@@ -37,10 +35,6 @@ export default {
           {
             title: this.$t('tickets.MyTickets'),
             name: 'MyTicketList'
-          },
-          {
-            title: this.$t('tickets.AssignedMe'),
-            name: 'AssignedTicketList'
           }
         ]
       }
