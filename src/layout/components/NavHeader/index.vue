@@ -21,9 +21,6 @@
           <SystemSetting />
         </el-tooltip>
       </li>
-      <li class="header-item active-menu">
-        <Help />
-      </li>
       <li class="header-item">
         <Language />
       </li>
@@ -50,7 +47,6 @@ import { mapGetters } from 'vuex'
 import Hamburger from '@/components/Widgets/Hamburger'
 import AccountDropdown from './AccountDropdown'
 import SiteMessages from './SiteMessages'
-import Help from './Help'
 import WebTerminal from './WebTerminal'
 import Tickets from './Tickets'
 import Organization from './Organization'
@@ -62,7 +58,6 @@ export default {
     Hamburger,
     Organization,
     AccountDropdown,
-    Help,
     Tickets,
     WebTerminal,
     SiteMessages,
