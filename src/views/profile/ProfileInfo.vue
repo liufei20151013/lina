@@ -335,7 +335,7 @@ export default {
           key: this.$t('users.DateExpired')
         },
         {
-          value: this.object.groups.map(item => item.name).join(' ｜ '),
+          value: this.object.groups.map(item => item.name.split('(')[0]).join(' ｜ '),
           key: this.$t('users.UserGroups')
         },
         {
