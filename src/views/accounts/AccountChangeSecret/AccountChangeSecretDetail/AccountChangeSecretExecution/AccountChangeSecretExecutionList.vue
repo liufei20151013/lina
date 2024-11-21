@@ -25,7 +25,7 @@ export default {
         url: '/api/v1/accounts/change-secret-executions',
         columns: [
           'ChangeSecretName', 'asset_amount', 'node_amount', 'status',
-          'trigger', 'date_start', 'date_finished', 'actions'
+          'trigger', 'success_amount', 'failed_amount', 'date_start', 'date_finished', 'actions'
         ],
         columnsMeta: {
           'ChangeSecretName': {
@@ -52,6 +52,20 @@ export default {
             width: '80px',
             formatter: function(row) {
               return <span>{row.snapshot.node_amount}</span>
+            }
+          },
+          success_amount: {
+            label: this.$t('accounts.AccountChangeSecret.SuccessAmount'),
+            width: '80px',
+            formatter: function(row) {
+              return <span>{row.snapshot.success_amount}</span>
+            }
+          },
+          failed_amount: {
+            label: this.$t('accounts.AccountChangeSecret.FailedAmount'),
+            width: '80px',
+            formatter: function(row) {
+              return <span>{row.snapshot.failed_amount}</span>
             }
           },
           status: {

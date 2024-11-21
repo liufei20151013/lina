@@ -67,6 +67,8 @@
       "SystemUser": "SystemUser",
       "AddNode": "Add node",
       "NodeAmount": "Node amount",
+      "SuccessAmount": "Success amount",
+      "FailedAmount": "Failed amount",
       "OnlyMailSend": "Currently only supports mail sending",
       "Username": "Username",
       "DateStart": "Date start",

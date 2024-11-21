@@ -67,6 +67,8 @@
       "SystemUser": "システム ユーザー",
       "AddNode": "ノードを追加",
       "NodeAmount": "ノード数",
+      "SuccessAmount": "成功",
+      "FailedAmount": "失敗",
       "OnlyMailSend": "現在メール送信のみ対応",
       "Username": "ユーザー名",
       "AssetAmount": "資産量",

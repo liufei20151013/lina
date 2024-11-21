@@ -103,6 +103,8 @@
       "ManualExecutePlan": "手動執行計劃",
       "Name": "名稱",
       "NodeAmount": "節點數量",
+      "SuccessAmount": "成功",
+      "FailedAmount": "失敗",
       "PasswordLength": "密碼長度",
       "ChangePassword": "更改密碼",
       "ModifySSHKey": "修改 SSH Key",
