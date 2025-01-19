@@ -34,9 +34,9 @@ export default {
         name: {
           disabled: true
         },
-        email: {
-          disabled: true
-        },
+        // email: {
+        //   disabled: false
+        // },
         phone: {
           component: PhoneInput
         },

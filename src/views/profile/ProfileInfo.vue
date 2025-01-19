@@ -293,10 +293,10 @@ export default {
           value: this.object.org_roles.map(item => item.display_name).join(' ｜ '),
           key: this.$t('users.OrgRoles')
         },
-        {
-          value: this.object.email,
-          key: this.$t('users.Email')
-        },
+        // {
+        //   value: this.object.email,
+        //   key: this.$t('users.Email')
+        // },
         {
           value: this.object.is_active,
           key: this.$t('users.IsActive')
