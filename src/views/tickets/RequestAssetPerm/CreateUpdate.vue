@@ -31,6 +31,7 @@ export default {
       hasDetailInMsg: false,
       loading: true,
       initial: {
+        title: '资产帐号申请',
         ips_or_not: true,
         apply_date_expired: date_expired,
         apply_date_start: date_start,
