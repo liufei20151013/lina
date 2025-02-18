@@ -168,7 +168,10 @@ export default {
           }
         },
         phone: {
-          component: PhoneInput
+          component: PhoneInput,
+          rules: [
+            rules.Required
+          ]
         },
         is_active: {
           label: this.$t('users.IsActive'),
