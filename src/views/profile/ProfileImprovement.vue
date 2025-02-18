@@ -6,6 +6,7 @@
 import { GenericCreateUpdatePage } from '@/layout/components'
 import { Required } from '@/components/Form/DataForm/rules'
 import { PhoneInput } from '@/components/Form/FormFields'
+import rules from '@/components/Form/DataForm/rules'
 
 export default {
   name: 'ProfileUpdate',
@@ -38,7 +39,10 @@ export default {
         //   disabled: false
         // },
         phone: {
-          component: PhoneInput
+          component: PhoneInput,
+          rules: [
+            rules.Required
+          ]
         },
         mfa_level: {
           disabled: (formValue) => {
