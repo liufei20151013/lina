@@ -101,12 +101,14 @@ export default {
           },
           from_ticket: {
             label: this.$t('perms.fromTicket'),
+            width: 100,
             formatterArgs: {
               showFalse: false
             }
           },
           users_amount: {
             label: this.$t('perms.User'),
+            width: '60px',
             formatter: AmountFormatter,
             formatterArgs: {
               async: true,
@@ -118,6 +120,7 @@ export default {
           },
           user_groups_amount: {
             label: this.$t('perms.UserGroups'),
+            width: '100px',
             formatter: AmountFormatter,
             formatterArgs: {
               async: true,
@@ -128,6 +131,7 @@ export default {
           },
           assets_amount: {
             label: this.$t('perms.Asset'),
+            width: '60px',
             formatter: AmountFormatter,
             formatterArgs: {
               async: true,
@@ -138,6 +142,7 @@ export default {
           },
           nodes_amount: {
             label: this.$t('perms.Node'),
+            width: '60px',
             formatter: AmountFormatter,
             formatterArgs: {
               async: true,
@@ -148,6 +153,7 @@ export default {
           },
           accounts: {
             label: this.$t('perms.Account'),
+            width: '60px',
             formatter: AmountFormatter,
             formatterArgs: {
               getItem(item) {
