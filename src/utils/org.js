@@ -5,6 +5,7 @@ export const DEFAULT_ORG_ID = '00000000-0000-0000-0000-000000000002'
 export const SYSTEM_ORG_ID = '00000000-0000-0000-0000-000000000004'
 
 export const GLOBAL_ORG_ID = '00000000-0000-0000-0000-000000000000'
+export const FIRST_ORG_ID = 'ac5b3bc7-27a0-44da-aa04-b85591ce96e5'
 
 function getPropOrg() {
   const orgs = store.getters.usingOrgs
