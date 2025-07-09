@@ -2,7 +2,7 @@ import { getProfile as apiGetProfile, logout } from '@/api/users'
 import {
   getCurrentOrgLocal, getPreOrgLocal, getTokenFromCookie, saveCurrentOrgLocal, setPreOrgLocal
 } from '@/utils/auth'
-import orgUtil from '@/utils/org'
+import orgUtil, { DEFAULT_ORG_ID, FIRST_ORG_ID } from '@/utils/org'
 import { resetRouter } from '@/router'
 import Vue from 'vue'
 import store from '@/store'
@@ -140,6 +140,10 @@ const actions = {
     })
   },
   setCurrentOrg({ commit }, data) {
+    if (data.id === DEFAULT_ORG_ID) {
+      data.id = FIRST_ORG_ID
+      data.name = '信息部'
+    }
     commit('SET_CURRENT_ORG', data)
   },
   enterSettingOrg({ commit }) {
