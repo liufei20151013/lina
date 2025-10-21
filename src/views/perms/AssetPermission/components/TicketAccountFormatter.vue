@@ -39,6 +39,7 @@ import {
 import ListTable from '@/components/Table/ListTable'
 import Dialog from '@/components/Dialog'
 
+let accounts = []
 export default {
   components: {
     TagInput,
@@ -154,6 +155,7 @@ export default {
           data, { params: { oid: this.oid }}
         ).then(res => {
           if (!res) res = []
+          accounts = res
           const data = res
             .filter(item => vm.value.indexOf(item) === -1)
             .map(v => ({ value: v, label: v }))
@@ -209,6 +211,18 @@ export default {
       this.outputValue()
     },
     outputValue() {
+      let isMatch = false
+      accounts.forEach(account => {
+        if (account === this.specAccountsInput[this.specAccountsInput.length - 1]) {
+          isMatch = true
+        }
+      })
+      if (!isMatch) {
+        this.$message.error('账号不存在：' + this.specAccountsInput[this.specAccountsInput.length - 1])
+        this.specAccountsInput.pop()
+        return
+      }
+
       let choicesSelected = this.choicesSelected
       if (this.showSpecAccounts) {
         const templateIds = this.specAccountsTemplate.map(i => `%${i.id}`)
