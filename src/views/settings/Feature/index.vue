@@ -14,10 +14,11 @@ import Ticket from './Ticket.vue'
 import Ops from './Ops.vue'
 import Chat from './Chat.vue'
 import VirtualApp from './VirtualApp.vue'
+import CMDB from './CMDB.vue'
 
 export default {
   name: 'Feature',
-  components: { TabPage, Announcement, Vault, Ticket, Ops, Chat, VirtualApp },
+  components: { TabPage, Announcement, Vault, Ticket, Ops, Chat, VirtualApp, CMDB },
   data() {
     return {
       activeMenu: 'Announcement',
@@ -51,6 +52,11 @@ export default {
           title: this.$t('VirtualApps'),
           name: 'VirtualApp',
           hidden: !this.$hasPerm('settings.change_virtualapp') || !this.$store.getters.hasValidLicense
+        },
+        {
+          title: this.$t('CMDB'),
+          name: 'CMDB',
+          hidden: !this.$hasPerm('settings.change_cmdb') || !this.$store.getters.hasValidLicense
         }
       ]
     }
