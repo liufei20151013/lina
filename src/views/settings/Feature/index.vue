@@ -15,10 +15,11 @@ import Ops from './Ops.vue'
 import Chat from './Chat.vue'
 import VirtualApp from './VirtualApp.vue'
 import CMDB from './CMDB.vue'
+import PAM from './PAM.vue'
 
 export default {
   name: 'Feature',
-  components: { TabPage, Announcement, Vault, Ticket, Ops, Chat, VirtualApp, CMDB },
+  components: { TabPage, Announcement, Vault, Ticket, Ops, Chat, VirtualApp, CMDB, PAM },
   data() {
     return {
       activeMenu: 'Announcement',
@@ -57,6 +58,11 @@ export default {
           title: this.$t('CMDB'),
           name: 'CMDB',
           hidden: !this.$hasPerm('settings.change_cmdb') || !this.$store.getters.hasValidLicense
+        },
+        {
+          title: this.$t('PAM'),
+          name: 'PAM',
+          hidden: !this.$hasPerm('settings.change_pam') || !this.$store.getters.hasValidLicense
         }
       ]
     }
