@@ -12,7 +12,7 @@
 import { GenericCreateUpdatePage } from '@/layout/components'
 import AssetSelect from '@/components/Apps/AssetSelect'
 import AccountFormatter from './components/AccountFormatter'
-import { AllAccount } from '../const'
+import { SpecAccount } from '../const'
 import ProtocolsSelect from '@/components/Form/FormFields/AllOrSpec.vue'
 
 export default {
@@ -33,7 +33,7 @@ export default {
       initial: {
         nodes: nodesInitial,
         assets: assetsInitial,
-        accounts: [AllAccount]
+        accounts: [SpecAccount]
       },
       fields: [
         [this.$t('Basic'), ['name']],

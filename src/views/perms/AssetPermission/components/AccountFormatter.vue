@@ -182,7 +182,21 @@ export default {
           data, { params: { oid: this.oid } }
         ).then(res => {
           if (!res) res = []
-          const data = res
+          let isAdmin = false
+          const system_roles = this.$store.getters.currentUser.system_roles
+          if (system_roles) {
+            for (let i = 0; i < system_roles.length; i++) {
+              if (system_roles[i].id === '00000000-0000-0000-0000-000000000001') {
+                isAdmin = true
+                break
+              }
+            }
+          }
+          let result = res
+          if (!isAdmin) {
+            result = res.filter(item => item !== 'root')
+          }
+          const data = result
             .filter(item => vm.value.indexOf(item) === -1)
             .map(v => ({ value: v, label: v }))
           cb(data)
@@ -196,7 +210,20 @@ export default {
     },
     iRealChoices: {
       get() {
+        let isAdmin = false
+        const system_roles = this.$store.getters.currentUser.system_roles
+        if (system_roles) {
+          for (let i = 0; i < system_roles.length; i++) {
+            if (system_roles[i].id === '00000000-0000-0000-0000-000000000001') {
+              isAdmin = true
+              break
+            }
+          }
+        }
         let choices = this.realChoices.slice()
+        if (!isAdmin) {
+          choices = this.realChoices.slice(1)
+        }
         if (!this.enableNoneAccount) {
           choices = choices.filter(i => i.value !== NoneAccount)
         }
