@@ -16,10 +16,11 @@ import Chat from './Chat.vue'
 import VirtualApp from './VirtualApp.vue'
 import CMDB from './CMDB.vue'
 import PAM from './PAM.vue'
+import DLT from './DLT.vue'
 
 export default {
   name: 'Feature',
-  components: { TabPage, Announcement, Vault, Ticket, Ops, Chat, VirtualApp, CMDB, PAM },
+  components: { TabPage, Announcement, Vault, Ticket, Ops, Chat, VirtualApp, CMDB, PAM, DLT },
   data() {
     return {
       activeMenu: 'Announcement',
@@ -63,6 +64,11 @@ export default {
           title: this.$t('PAM'),
           name: 'PAM',
           hidden: !this.$hasPerm('settings.change_pam') || !this.$store.getters.hasValidLicense
+        },
+        {
+          title: this.$t('DLT'),
+          name: 'DLT',
+          hidden: !this.$hasPerm('settings.change_dlt') || !this.$store.getters.hasValidLicense
         }
       ]
     }
