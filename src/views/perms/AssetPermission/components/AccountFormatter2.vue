@@ -182,7 +182,22 @@ export default {
           data, { params: { oid: this.oid } }
         ).then(res => {
           if (!res) res = []
-          const data = res
+          let isAdmin = false
+          const system_roles = this.$store.getters.currentUser.system_roles
+          if (system_roles) {
+            for (let i = 0; i < system_roles.length; i++) {
+              if (system_roles[i].id === '00000000-0000-0000-0000-000000000001') {
+                isAdmin = true
+                break
+              }
+            }
+          }
+          let result = res
+          const excluded_account = new Set(['root', 'loginuser', 'cyuser'])
+          if (!isAdmin) {
+            result = res.filter(item => !excluded_account.has(item))
+          }
+          const data = result
             .filter(item => vm.value.indexOf(item) === -1)
             .map(v => ({ value: v, label: v }))
           cb(data)
