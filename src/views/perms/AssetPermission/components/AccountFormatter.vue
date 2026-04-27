@@ -196,20 +196,7 @@ export default {
     },
     iRealChoices: {
       get() {
-        let isAdmin = false
-        const system_roles = this.$store.getters.currentUser.system_roles
-        if (system_roles) {
-          for (let i = 0; i < system_roles.length; i++) {
-            if (system_roles[i].id === '00000000-0000-0000-0000-000000000001') {
-              isAdmin = true
-              break
-            }
-          }
-        }
         let choices = this.realChoices.slice()
-        if (!isAdmin) {
-          choices = this.realChoices.slice(1)
-        }
         if (!this.enableNoneAccount) {
           choices = choices.filter(i => i.value !== NoneAccount)
         }
