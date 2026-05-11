@@ -234,6 +234,7 @@ $height: 28px;
       padding: 0 15px;
       line-height: 30px;
       height: 30px;
+      width: 260px;
     }
   }
 }
