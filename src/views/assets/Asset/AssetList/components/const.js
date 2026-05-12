@@ -262,6 +262,16 @@ export function getDefaultConfig(vm) {
                 }, 200)
               }
             },
+            {
+              name: 'SyncAccount',
+              title: vm.$t('SyncAccount'),
+              can: ({ row }) => !vm.$store.getters.currentOrgIsRoot,
+              callback: ({ row }) => {
+                const id = row.id
+                const url = `/api/v1/assets/assets/${id}/sync-account/`
+                return vm.$axios.get(url)
+              }
+            },
             ...vm.addExtraMoreColActions
           ]
         }
