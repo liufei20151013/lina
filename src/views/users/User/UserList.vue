@@ -44,6 +44,9 @@ export default {
     const hasDelete = () => {
       return vm.$hasPerm('users.delete_user')
     }
+    const hasClone = () => {
+      return vm.$hasPerm('users.delete_user')
+    }
     const hasRemove = () => {
       if (!vm.publicSettings['XPACK_LICENSE_IS_VALID']) {
         return false
@@ -253,6 +256,7 @@ export default {
           actions: {
             formatterArgs: {
               hasDelete: hasDelete,
+              hasClone: hasClone,
               canUpdate: ({ row }) => {
                 return this.$hasPerm('users.change_user') &&
                   !(!this.currentUserIsSuperAdmin && row['is_superuser'])
