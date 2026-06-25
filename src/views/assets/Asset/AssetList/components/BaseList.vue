@@ -125,7 +125,7 @@ export default {
       type: 'primary',
       icon: '',
       split: true,
-      has: this.headerActions.hasCreate,
+      has: this.$hasPerm('assets.add_asset'),
       can: !this.$store.getters.currentOrgIsRoot,
       callback: () => {
         this.showPlatform = false
