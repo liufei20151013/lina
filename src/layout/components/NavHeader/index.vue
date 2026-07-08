@@ -64,7 +64,7 @@ import Organization from './Organization'
 import SystemSetting from './SystemSetting'
 import Logo from '../NavLeft/Logo'
 import Language from './Language'
-import Search from './Search'
+// import Search from './Search'
 
 export default {
   components: {
@@ -77,8 +77,9 @@ export default {
     SiteMessages,
     SystemSetting,
     Logo,
-    Language,
-    Search
+    Language
+    // ,
+    // Search
   },
   data() {
     return {
