@@ -256,8 +256,8 @@ export default {
     },
     async setDefaultRoles() {
       const roles = await this.$axios.get('/api/v1/rbac/roles/')
-      this.initial.system_roles = roles.filter(role => role.name === 'User').map(role => role.id)
-      this.initial.org_roles = roles.filter(role => role.name === 'OrgUser').map(role => role.id)
+      this.initial.system_roles = roles.filter(role => role.id === 'fd84ed64-9994-4454-8b22-cbfe445b4048').map(role => role.id)
+      this.initial.org_roles = roles.filter(role => role.id === '9c4c1136-5609-44a3-b0cb-d8b32496223c').map(role => role.id)
     },
     disableMFAFieldIfNeed(user) {
       let options = null
