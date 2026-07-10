@@ -432,6 +432,12 @@ export default {
       if (Array.isArray(data)) {
         data = {}
       }
+      if (url.includes('ops/adhocs') || url.includes('ops/playbook')) {
+        if (data.scope) {
+          data.scope = { value: 'private', label: 'private' }
+        }
+      }
+      this.$log.debug('Get object detail: ', data)
       return data
     }
   }
